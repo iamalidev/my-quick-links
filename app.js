@@ -6,19 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
     profileImg.classList.add("is-animated");
-  }, 100);
+  }, 300);
 
   setTimeout(() => {
     nameElement.classList.add("is-animated");
-  }, 200);
+  }, 400);
 
   setTimeout(() => {
     titleElement.classList.add("is-animated");
-  }, 300);
+  }, 500);
 
   links.forEach((link, index) => {
     setTimeout(() => {
       link.classList.add("is-animated");
-    }, 400 + index * 50);
+    }, 600 + index * 50);
   });
 });
