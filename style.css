@@ -64,6 +64,12 @@ body {
   border-radius: 5px;
   border: 1px solid #272727;
   box-shadow: 0px 1px 5px 1px #77777740;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px 2px #77777740;
 }
 
 .link > img {
@@ -75,12 +81,13 @@ body {
 /* Animation */
 .slide-up {
   opacity: 0;
-  transform: translateY(80px);
+  transform: translateY(80px) scale(0.95);
   transform-style: preserve-3d;
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
 }
 
 .slide-up.is-animated {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }

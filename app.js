@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
     profileImg.classList.add("is-animated");
-  }, 300);
+  }, 200);
 
   setTimeout(() => {
     nameElement.classList.add("is-animated");
@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
     titleElement.classList.add("is-animated");
-  }, 500);
+  }, 600);
 
   links.forEach((link, index) => {
     setTimeout(() => {
       link.classList.add("is-animated");
-    }, 600 + index * 50);
+    }, 800 + index * 100);
   });
 });
