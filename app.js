@@ -4,6 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const titleElement = document.querySelector(".title");
   const links = document.querySelectorAll(".link");
 
+  // Check for saved theme preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+  }
+
+  // Theme toggle handler
+  profileImg.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    // Save theme preference
+    const isLightMode = document.body.classList.contains('light-mode');
+    localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+  });
+
+  // Initial animations
   setTimeout(() => {
     profileImg.classList.add("is-animated");
   }, 200);
